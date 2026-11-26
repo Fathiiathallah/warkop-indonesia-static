@@ -1,0 +1,55 @@
+@import "tailwindcss";
+
+:root {
+  --bg: #ffffff;
+  --surface: #f6f8f6;
+  --ink: #0b1f17;
+  --muted: #5c6d64;
+  --line: #e4eae5;
+  --green: #14603c;
+  --green-dark: #0e4630;
+  --green-tint: #eef5f0;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 5rem;
+}
+
+body {
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  font-feature-settings: "ss01" on, "cv11" on;
+}
+
+h1, h2, h3, h4 {
+  letter-spacing: -0.025em;
+}
+
+.eyebrow {
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(14px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fade-in 0.6s cubic-bezier(0.22,0.7,0.24,1) backwards; }
+.d1 { animation-delay: .05s } .d2 { animation-delay: .12s }
+.d3 { animation-delay: .19s } .d4 { animation-delay: .26s }
+
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+::selection { background: var(--green); color: #fff; }

@@ -1,35 +1,36 @@
-# Warkop Indonesia — Static (HTML/CSS/JS)
+# Warkop Indonesia
 
-Versi statis dari landing page Warkop Indonesia. Tanpa framework, tanpa build step.
+Dua versi website Warkop Indonesia dalam satu repo:
 
-## Struktur
+| Folder | Isi | Live |
+|---|---|---|
+| `/` (root) | Versi static — HTML, CSS, JS murni. Tanpa build step. | https://warkop-indonesia-static.vercel.app |
+| `/nextjs` | Versi Next.js 16 + TypeScript + Tailwind. | deploy terpisah |
+
+## Versi static (root)
 
 ```
-index.html          landing page (hero, tentang, fasilitas, menu, event, lokasi)
-menu.html           katalog lengkap + pagination per kategori
+index.html          landing page
+menu.html           katalog + keranjang
 assets/css/style.css
 assets/js/app.js    data menu, keranjang (localStorage), pembayaran, form event
 assets/img/         logo, QRIS, foto menu
 ```
 
-## Menjalankan
+Jalankan: buka `index.html` di browser, atau `python -m http.server 8080`.
 
-Buka `index.html` langsung di browser, atau:
+## Versi Next.js (`/nextjs`)
 
 ```bash
-python -m http.server 8080
+cd nextjs
+npm install
+npm run dev     # http://localhost:3000
+npm run build
 ```
 
-## Yang perlu diganti sebelum go-live
+## Sebelum go-live
 
-- `assets/js/app.js` → `CONFIG.phone` (nomor WhatsApp kasir)
-- `assets/js/app.js` → `PAYMENT.banks` (nomor rekening asli)
-- `assets/js/app.js` → `PAYMENT.qris` (NMID + gambar QRIS asli di `assets/img/qris.png`)
+Ganti data placeholder:
 
-## Alur pesanan
-
-1. Pilih menu → keranjang tersimpan di `localStorage`.
-2. Isi nama + nomor meja / jam ambil.
-3. Pilih metode bayar: tunai, transfer bank, atau QRIS.
-4. Kirim → WhatsApp terbuka dengan detail pesanan + metode bayar.
-5. Lampirkan foto bukti transaksi di chat tersebut.
+- Static → `assets/js/app.js`: `CONFIG.phone`, `PAYMENT.banks`, `PAYMENT.qris`
+- Next.js → `src/lib/payment.ts` dan `src/lib/config.ts`
