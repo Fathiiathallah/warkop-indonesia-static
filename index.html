@@ -12,6 +12,47 @@
 <link rel="stylesheet" href="assets/css/style.css" />
 </head>
 <body>
+<div id="wi-sprite"><svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="i-coffee" viewBox="0 0 24 24"><path d="M10 2v2"/><path d="M14 2v2"/><path d="M16 8a1 1 0 0 1 1 1v8a4 4 0 0 1-4 4H7a4 4 0 0 1-4-4V9a1 1 0 0 1 1-1h14a4 4 0 1 1 0 8h-1"/><path d="M6 2v2"/></symbol>
+    <symbol id="i-map-pin" viewBox="0 0 24 24"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></symbol>
+    <symbol id="i-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></symbol>
+    <symbol id="i-arrow-right" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></symbol>
+    <symbol id="i-arrow-up-right" viewBox="0 0 24 24"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></symbol>
+    <symbol id="i-arrow-up" viewBox="0 0 24 24"><path d="m5 12 7-7 7 7"/><path d="M12 19V5"/></symbol>
+    <symbol id="i-arrow-left" viewBox="0 0 24 24"><path d="m12 19-7-7 7-7"/><path d="M19 12H5"/></symbol>
+    <symbol id="i-wifi" viewBox="0 0 24 24"><path d="M12 20h.01"/><path d="M2 8.82a15 15 0 0 1 20 0"/><path d="M5 12.86a10 10 0 0 1 14 0"/><path d="M8.5 16.43a5 5 0 0 1 7 0"/></symbol>
+    <symbol id="i-zap" viewBox="0 0 24 24"><path d="M4 14a1 1 0 0 1-.78-1.63l9.9-10.2a.5.5 0 0 1 .86.46l-1.92 6.02A1 1 0 0 0 13 10h7a1 1 0 0 1 .78 1.63l-9.9 10.2a.5.5 0 0 1-.86-.46l1.92-6.02A1 1 0 0 0 11 14z"/></symbol>
+    <symbol id="i-flame" viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></symbol>
+    <symbol id="i-compass" viewBox="0 0 24 24"><path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/><circle cx="12" cy="12" r="10"/></symbol>
+    <symbol id="i-car" viewBox="0 0 24 24"><path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/><circle cx="7" cy="17" r="2"/><path d="M9 17h6"/><circle cx="17" cy="17" r="2"/></symbol>
+    <symbol id="i-users" viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></symbol>
+    <symbol id="i-target" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><circle cx="12" cy="12" r="6"/><circle cx="12" cy="12" r="2"/></symbol>
+    <symbol id="i-trending-up" viewBox="0 0 24 24"><polyline points="22 7 13.5 15.5 8.5 10.5 2 17"/><polyline points="16 7 22 7 22 13"/></symbol>
+    <symbol id="i-sparkles" viewBox="0 0 24 24"><path d="M9.937 15.5A2 2 0 0 0 8.5 14.063l-6.135-1.582a.5.5 0 0 1 0-.962L8.5 9.936A2 2 0 0 0 9.937 8.5l1.582-6.135a.5.5 0 0 1 .963 0L14.063 8.5A2 2 0 0 0 15.5 9.937l6.135 1.581a.5.5 0 0 1 0 .964L15.5 14.063a2 2 0 0 0-1.437 1.437l-1.582 6.135a.5.5 0 0 1-.963 0z"/></symbol>
+    <symbol id="i-palette" viewBox="0 0 24 24"><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.926 0 1.648-.746 1.648-1.688 0-.437-.18-.835-.437-1.125-.29-.289-.438-.652-.438-1.125a1.64 1.64 0 0 1 1.668-1.668h1.996c3.051 0 5.555-2.503 5.555-5.554C21.965 6.012 17.461 2 12 2z"/><circle cx="13.5" cy="6.5" r=".5"/><circle cx="17.5" cy="10.5" r=".5"/><circle cx="8.5" cy="7.5" r=".5"/><circle cx="6.5" cy="12.5" r=".5"/></symbol>
+    <symbol id="i-music" viewBox="0 0 24 24"><path d="M9 18V5l12-2v13"/><circle cx="6" cy="18" r="3"/><circle cx="18" cy="16" r="3"/></symbol>
+    <symbol id="i-presentation" viewBox="0 0 24 24"><path d="M2 3h20"/><path d="M21 3v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V3"/><path d="m7 21 5-5 5 5"/></symbol>
+    <symbol id="i-party" viewBox="0 0 24 24"><path d="M5.8 11.3 2 22l10.7-3.79"/><path d="M4 3h.01"/><path d="M22 8h.01"/><path d="M15 2h.01"/><path d="M22 20h.01"/><path d="m22 2-2.24.75a2.9 2.9 0 0 0-1.96 3.12c.1.86-.57 1.63-1.45 1.63h-.38c-.86 0-1.6.6-1.76 1.44L14 10"/><path d="m22 13-.82-.33c-.86-.34-1.82.2-1.98 1.11c-.11.7-.72 1.22-1.43 1.22H17"/><path d="m11 2 .33.82c.34.86-.2 1.82-1.11 1.98C9.52 4.9 9 5.52 9 6.23V7"/><path d="M11 13c1.93 1.93 2.83 4.17 2 5-.83.83-3.07-.07-5-2-1.93-1.93-2.83-4.17-2-5 .83-.83 3.07.07 5 2Z"/></symbol>
+    <symbol id="i-calendar" viewBox="0 0 24 24"><path d="M8 2v4"/><path d="M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/></symbol>
+    <symbol id="i-bag" viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M12 5v14"/></symbol>
+    <symbol id="i-minus" viewBox="0 0 24 24"><path d="M5 12h14"/></symbol>
+    <symbol id="i-x" viewBox="0 0 24 24"><path d="M18 6 6 18"/><path d="m6 6 12 12"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18"/><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6"/><path d="M8 6V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"/></symbol>
+    <symbol id="i-send" viewBox="0 0 24 24"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/><path d="m21.854 2.147-10.94 10.939"/></symbol>
+    <symbol id="i-banknote" viewBox="0 0 24 24"><rect width="20" height="12" x="2" y="6" rx="2"/><circle cx="12" cy="12" r="2"/><path d="M6 12h.01M18 12h.01"/></symbol>
+    <symbol id="i-bank" viewBox="0 0 24 24"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4M10 10h4M10 14h4M10 18h4"/></symbol>
+    <symbol id="i-qr" viewBox="0 0 24 24"><rect width="5" height="5" x="3" y="3" rx="1"/><rect width="5" height="5" x="16" y="3" rx="1"/><rect width="5" height="5" x="3" y="16" rx="1"/><path d="M21 16h-3a2 2 0 0 0-2 2v3"/><path d="M21 21v.01"/><path d="M12 7v3a2 2 0 0 1-2 2H7"/><path d="M3 12h.01"/><path d="M12 3h.01"/><path d="M12 16v.01"/><path d="M16 12h1"/><path d="M21 12v.01"/><path d="M12 21v-1"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="M20 6 9 17l-5-5"/></symbol>
+    <symbol id="i-store" viewBox="0 0 24 24"><path d="m2 7 4.41-4.41A2 2 0 0 1 7.83 2h8.34a2 2 0 0 1 1.42.59L22 7"/><path d="M4 12v8a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-8"/><path d="M15 22v-4a2 2 0 0 0-2-2h-2a2 2 0 0 0-2 2v4"/><path d="M2 7h20"/><path d="M22 7v3a2 2 0 0 1-2 2a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 16 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 12 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 8 12a2.7 2.7 0 0 1-1.59-.63.7.7 0 0 0-.82 0A2.7 2.7 0 0 1 4 12a2 2 0 0 1-2-2V7"/></symbol>
+    <symbol id="i-navigation" viewBox="0 0 24 24"><polygon points="3 11 22 2 13 21 11 13 3 11"/></symbol>
+    <symbol id="i-alert" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="12" x2="12" y1="8" y2="12"/><line x1="12" x2="12.01" y1="16" y2="16"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="18" y2="18"/></symbol>
+  </defs>
+</svg>
+</div>
 
 <header class="site-header" id="siteHeader">
   <div class="wrap">
@@ -28,7 +69,7 @@
         <button class="btn-cart" data-open-cart>
           Pesanan <span class="cart-count" style="display:none">0</span>
         </button>
-        <button class="nav-toggle" id="navToggle" aria-label="Menu">☰</button>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu"><svg class="ico" aria-hidden="true"><use href="#i-menu"/></svg></button>
       </div>
     </div>
   </div>
@@ -47,19 +88,19 @@
     <div class="wrap">
       <div class="hero-grid">
         <div>
-          <span class="badge eyebrow">☕ Warung Kopi · Panakkukang</span>
+          <span class="badge eyebrow"><svg class="ico" aria-hidden="true"><use href="#i-coffee"/></svg> Warung Kopi · Panakkukang</span>
           <h1>Ruang santai &amp;<br />cita rasa otentik <span>Makassar</span>.</h1>
           <p class="hero-lead">
             Kopi susu racikan warkop, indomie gurih, dan pisang goreng sambel.
             Tempat yang pas untuk nugas, rapat kecil, atau sekadar menunda pulang.
           </p>
           <div class="hero-actions">
-            <a href="menu.html" class="btn btn--primary">Lihat menu →</a>
-            <a href="https://maps.google.com/?q=Jl.+Anggrek+Raya+No.23,+Paropo,+Panakkukang,+Makassar" target="_blank" rel="noopener" class="btn btn--ghost">📍 Petunjuk arah</a>
+            <a href="menu.html" class="btn btn--primary">Lihat menu <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
+            <a href="https://maps.google.com/?q=Jl.+Anggrek+Raya+No.23,+Paropo,+Panakkukang,+Makassar" target="_blank" rel="noopener" class="btn btn--ghost"><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg> Petunjuk arah</a>
           </div>
           <div class="hero-meta">
-            <span>🕗 08.00 – 24.00 WITA</span>
-            <span>📍 Jl. Anggrek Raya No.23</span>
+            <span><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg> 08.00 – 24.00 WITA</span>
+            <span><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg> Jl. Anggrek Raya No.23</span>
           </div>
         </div>
         <div class="hero-media">
@@ -89,19 +130,19 @@
       </p>
       <div class="grid-3">
         <div class="card pillar">
-          <div class="ico">◎</div>
+          <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-target"/></svg></div>
           <h3>Top of Mind</h3>
           <p class="sub">Casual Creative Space</p>
           <p>Yang pertama terlintas saat orang mencari tempat kreatif untuk berkumpul, bekerja, atau bertukar ide di Makassar.</p>
         </div>
         <div class="card pillar">
-          <div class="ico">↗</div>
+          <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-trending-up"/></svg></div>
           <h3>Model Bisnis Terbukti</h3>
           <p class="sub">Health &amp; Growth</p>
           <p>Usaha yang sehat secara finansial dan operasional, tumbuh terukur bersama komunitas pelanggan setianya.</p>
         </div>
         <div class="card pillar">
-          <div class="ico">✦</div>
+          <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-sparkles"/></svg></div>
           <h3>Visi</h3>
           <p class="sub">Ruang Kreatif Kasual</p>
           <p>Menjadi ruang kreatif kasual paling diingat — inklusif, ramah kantong, dan konsisten dari hari ke hari.</p>
@@ -116,12 +157,12 @@
       <span class="eyebrow">Fasilitas</span>
       <h2 class="section-title">Yang bikin betah lama.</h2>
       <div class="grid-3">
-        <div class="facility"><div class="ico">📶</div><h3>Wi-Fi kencang</h3><p>Stabil untuk nugas, kerja remote, atau sekadar scrolling.</p></div>
-        <div class="facility"><div class="ico">⚡</div><h3>Stopkontak di meja</h3><p>Hampir setiap meja punya colokan. Baterai aman.</p></div>
-        <div class="facility"><div class="ico">💨</div><h3>Area smoking</h3><p>Sirkulasi terbuka khas warkop Makassar.</p></div>
-        <div class="facility"><div class="ico">🌙</div><h3>Buka sampai 24.00</h3><p>Dari kopi pembuka pagi sampai obrolan tengah malam.</p></div>
-        <div class="facility"><div class="ico">🅿️</div><h3>Parkir luas</h3><p>Motor dan mobil, langsung di Jl. Anggrek Raya.</p></div>
-        <div class="facility"><div class="ico">👥</div><h3>Titik temu komunitas</h3><p>Mahasiswa, pekerja kreatif, dan warga lokal.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-wifi"/></svg></div><h3>Wi-Fi kencang</h3><p>Stabil untuk nugas, kerja remote, atau sekadar scrolling.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-zap"/></svg></div><h3>Stopkontak di meja</h3><p>Hampir setiap meja punya colokan. Baterai aman.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-flame"/></svg></div><h3>Area smoking</h3><p>Sirkulasi terbuka khas warkop Makassar.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-compass"/></svg></div><h3>Buka sampai 24.00</h3><p>Dari kopi pembuka pagi sampai obrolan tengah malam.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-car"/></svg></div><h3>Parkir luas</h3><p>Motor dan mobil, langsung di Jl. Anggrek Raya.</p></div>
+        <div class="facility"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-users"/></svg></div><h3>Titik temu komunitas</h3><p>Mahasiswa, pekerja kreatif, dan warga lokal.</p></div>
       </div>
     </div>
   </section>
@@ -134,7 +175,7 @@
           <span class="eyebrow">Menu</span>
           <h2 class="section-title">Yang paling sering dipesan.</h2>
         </div>
-        <a href="menu.html" class="link-arrow">Semua menu →</a>
+        <a href="menu.html" class="link-arrow">Semua menu <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
 
       <div class="grid-3">
@@ -163,7 +204,7 @@
 
       <div class="cta-row">
         <p>40+ item: kopi, teh, mie, camilan, sampai roasted bean Toraja. Pesan langsung, bayar di kasir.</p>
-        <a href="menu.html" class="btn btn--dark">Buka katalog →</a>
+        <a href="menu.html" class="btn btn--dark">Buka katalog <svg class="ico" aria-hidden="true"><use href="#i-arrow-right"/></svg></a>
       </div>
     </div>
   </section>
@@ -181,10 +222,10 @@
       <div class="event-grid">
         <div>
           <div class="event-types">
-            <div class="event-type"><div class="ico">🎨</div><span>Pameran seni</span></div>
-            <div class="event-type"><div class="ico">🎵</div><span>Live music</span></div>
-            <div class="event-type"><div class="ico">💡</div><span>Workshop / talkshow</span></div>
-            <div class="event-type"><div class="ico">🎉</div><span>Gathering komunitas</span></div>
+            <div class="event-type"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-palette"/></svg></div><span>Pameran seni</span></div>
+            <div class="event-type"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-music"/></svg></div><span>Live music</span></div>
+            <div class="event-type"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-presentation"/></svg></div><span>Workshop / talkshow</span></div>
+            <div class="event-type"><div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-party"/></svg></div><span>Gathering komunitas</span></div>
           </div>
           <div class="event-note">
             Kapasitas indoor ±40 orang. Untuk acara lebih besar, kami bisa pakai
@@ -194,7 +235,7 @@
 
         <div>
           <form class="event-form" id="eventForm">
-            <div class="form-head">📅 Form pengajuan event</div>
+            <div class="form-head"><svg class="ico" aria-hidden="true"><use href="#i-calendar"/></svg> Form pengajuan event</div>
             <div class="field-row">
               <div class="field"><label>Nama / komunitas *</label><input id="evName" required placeholder="Nama kamu atau komunitas" /></div>
               <div class="field"><label>WhatsApp *</label><input id="evWa" type="tel" required placeholder="08xx xxxx xxxx" /></div>
@@ -213,12 +254,12 @@
               <div class="field"><label>Estimasi peserta</label><input id="evPeople" type="number" min="1" placeholder="30" /></div>
             </div>
             <div class="field"><label>Detail acara</label><textarea id="evNote" placeholder="Ceritakan singkat acaramu: tema pameran, kebutuhan sound, dsb."></textarea></div>
-            <button type="submit" class="btn btn--primary btn--block">Kirim pengajuan via WhatsApp ↗</button>
+            <button type="submit" class="btn btn--primary btn--block">Kirim pengajuan via WhatsApp <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></button>
             <p style="margin-top:10px;font-size:.7rem;text-align:center;color:var(--muted)">Data hanya dipakai untuk konfirmasi ketersediaan jadwal.</p>
           </form>
 
           <div class="card form-ok" id="eventOk" style="display:none;padding:40px 24px">
-            <div class="tick">✓</div>
+            <div class="tick"><svg class="ico-lg" aria-hidden="true"><use href="#i-check"/></svg></div>
             <h3>Pengajuan terkirim</h3>
             <p>WhatsApp sudah terbuka dengan detail acaramu. Kami balas maksimal 1x24 jam.</p>
             <button class="btn btn--ghost" id="eventReset" style="margin-top:16px">Ajukan lagi</button>
@@ -237,27 +278,27 @@
       <div class="loc-grid">
         <div class="card loc-card">
           <div class="loc-item">
-            <div class="ico">📍</div>
+            <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-map-pin"/></svg></div>
             <div>
               <div class="k">Alamat</div>
               <div class="v">Jl. Anggrek Raya No.23, Paropo, Kec. Panakkukang, Kota Makassar, Sulawesi Selatan 90231</div>
             </div>
           </div>
           <div class="loc-item">
-            <div class="ico">🕗</div>
+            <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-clock"/></svg></div>
             <div>
               <div class="k">Jam operasional</div>
               <div class="v">Setiap Hari 08.00 - 24.00 WITA<br /><span style="color:var(--muted);font-size:.8rem">Buka setiap hari termasuk libur nasional</span></div>
             </div>
           </div>
           <div class="loc-item">
-            <div class="ico">💬</div>
+            <div class="ico"><svg class="ico" aria-hidden="true"><use href="#i-bag"/></svg></div>
             <div>
               <div class="k">WhatsApp</div>
-              <div class="v"><a href="https://wa.me/6285342243869" target="_blank" rel="noopener">0853-4224-3869 ↗</a></div>
+              <div class="v"><a href="https://wa.me/6285342243869" target="_blank" rel="noopener">0853-4224-3869 <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a></div>
             </div>
           </div>
-          <a href="https://maps.google.com/?q=Jl.+Anggrek+Raya+No.23,+Paropo,+Panakkukang,+Makassar" target="_blank" rel="noopener" class="btn btn--primary btn--block">🧭 Buka di Google Maps</a>
+          <a href="https://maps.google.com/?q=Jl.+Anggrek+Raya+No.23,+Paropo,+Panakkukang,+Makassar" target="_blank" rel="noopener" class="btn btn--primary btn--block"><svg class="ico" aria-hidden="true"><use href="#i-navigation"/></svg> Buka di Google Maps</a>
         </div>
 
         <div class="card map-card">
@@ -273,7 +314,7 @@
         <div class="busy-chart" id="busyChart"></div>
         <div class="busy-foot">
           <span>Mau meja dekat colokan? Datang sebelum jam 15.00.</span>
-          <a href="https://wa.me/6285342243869?text=Halo%20Warkop%20Indonesia,%20masih%20ada%20meja%20kosong%20sekarang?" target="_blank" rel="noopener" class="link-arrow">Tanya barista ↗</a>
+          <a href="https://wa.me/6285342243869?text=Halo%20Warkop%20Indonesia,%20masih%20ada%20meja%20kosong%20sekarang?" target="_blank" rel="noopener" class="link-arrow">Tanya barista <svg class="ico" aria-hidden="true"><use href="#i-arrow-up-right"/></svg></a>
         </div>
       </div>
     </div>
@@ -307,7 +348,7 @@
     </div>
     <div class="footer-bottom">
       <span>© 2026 Warkop Indonesia. Hak cipta dilindungi.</span>
-      <a href="#">Kembali ke atas ↑</a>
+      <a href="#">Kembali ke atas <svg class="ico" aria-hidden="true"><use href="#i-arrow-up"/></svg></a>
     </div>
   </div>
 </footer>

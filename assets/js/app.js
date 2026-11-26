@@ -87,6 +87,9 @@ const SERIES = [
   },
 ];
 
+const ICON_PLUS = '<svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg>';
+const ICON_CHECK = '<svg class="ico" aria-hidden="true"><use href="#i-check"/></svg>';
+
 const rupiah = (n) => "Rp " + n.toLocaleString("id-ID");
 const $ = (s, el = document) => el.querySelector(s);
 const $$ = (s, el = document) => [...el.querySelectorAll(s)];
@@ -152,13 +155,13 @@ function buildDrawer() {
     <aside class="drawer" id="drawer" aria-label="Keranjang pesanan">
       <div class="drawer-head">
         <div style="display:flex;align-items:center;gap:8px">
-          <button class="icon-btn" id="backStep" style="display:none" aria-label="Kembali">&larr;</button>
+          <button class="icon-btn" id="backStep" style="display:none" aria-label="Kembali"><svg class="ico" aria-hidden="true"><use href="#i-arrow-left"/></svg></button>
           <div>
             <h2 id="drawerTitle">Pesanan saya</h2>
             <p id="drawerSub">0 item dipilih</p>
           </div>
         </div>
-        <button class="icon-btn" id="closeDrawer" aria-label="Tutup">&times;</button>
+        <button class="icon-btn" id="closeDrawer" aria-label="Tutup"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
       </div>
       <div class="drawer-body" id="drawerBody"></div>
       <div class="drawer-foot" id="drawerFoot" style="display:none"></div>
@@ -195,7 +198,7 @@ function renderCart() {
 
   if (cart.length === 0) {
     body.innerHTML = `<div class="empty">
-      <div class="ico">&#128717;</div>
+      <div class="ico"><svg class="ico-lg" aria-hidden="true"><use href="#i-bag"/></svg></div>
       <h3>Keranjang masih kosong</h3>
       <p>Pilih kopi, mie, atau camilan favoritmu dulu.</p>
     </div>`;
@@ -233,13 +236,13 @@ function renderCart() {
             <h4>${item.name}</h4>
             <div class="unit">${rupiah(item.price)}</div>
           </div>
-          <button class="icon-btn" data-remove="${item.id}" aria-label="Hapus">&times;</button>
+          <button class="icon-btn" data-remove="${item.id}" aria-label="Hapus"><svg class="ico" aria-hidden="true"><use href="#i-x"/></svg></button>
         </div>
         <div class="cart-line-bot">
           <div class="qty">
-            <button data-minus="${item.id}">&minus;</button>
+            <button data-minus="${item.id}"><svg class="ico" aria-hidden="true"><use href="#i-minus"/></svg></button>
             <span>${item.qty}</span>
-            <button data-plus="${item.id}">&plus;</button>
+            <button data-plus="${item.id}"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg></button>
           </div>
           <div class="sub">${rupiah(item.price * item.qty)}</div>
         </div>`;
@@ -283,9 +286,9 @@ function renderCart() {
     body.innerHTML = `
       <div class="pay-total"><span>Total tagihan</span><strong>${rupiah(totalPrice())}</strong></div>
       <div class="eyebrow" style="color:var(--muted);margin-bottom:10px">Metode pembayaran</div>
-      <button class="pay-option ${method === "cash" ? "is-active" : ""}" data-pay="cash">&#128181; Tunai di kasir<span class="radio"></span></button>
-      <button class="pay-option ${method === "transfer" ? "is-active" : ""}" data-pay="transfer">&#127974; Transfer bank<span class="radio"></span></button>
-      <button class="pay-option ${method === "qris" ? "is-active" : ""}" data-pay="qris">&#128241; QRIS<span class="radio"></span></button>
+      <button class="pay-option ${method === "cash" ? "is-active" : ""}" data-pay="cash"><svg class="ico" aria-hidden="true"><use href="#i-banknote"/></svg> Tunai di kasir<span class="radio"></span></button>
+      <button class="pay-option ${method === "transfer" ? "is-active" : ""}" data-pay="transfer"><svg class="ico" aria-hidden="true"><use href="#i-bank"/></svg> Transfer bank<span class="radio"></span></button>
+      <button class="pay-option ${method === "qris" ? "is-active" : ""}" data-pay="qris"><svg class="ico" aria-hidden="true"><use href="#i-qr"/></svg> QRIS<span class="radio"></span></button>
       <div id="payPanel"></div>`;
 
     const panel = $("#payPanel");
@@ -425,7 +428,7 @@ function renderCatalog() {
           <p class="desc">${it.desc}</p>
           <div class="foot">
             <span class="price">${rupiah(it.price)}</span>
-            <button class="btn-add" data-add="${it.id}">+ Pesan</button>
+            <button class="btn-add" data-add="${it.id}"><svg class="ico" aria-hidden="true"><use href="#i-plus"/></svg> Pesan</button>
           </div>
         </div>
       </article>`).join("");
@@ -450,8 +453,8 @@ function renderCatalog() {
       if (!item) return;
       addToCart(item);
       add.classList.add("is-added");
-      add.textContent = "Masuk";
-      setTimeout(() => { add.classList.remove("is-added"); add.textContent = "+ Pesan"; }, 1100);
+      add.innerHTML = ICON_CHECK + " Masuk";
+      setTimeout(() => { add.classList.remove("is-added"); add.innerHTML = ICON_PLUS + " Pesan"; }, 1100);
     }
   });
 }
